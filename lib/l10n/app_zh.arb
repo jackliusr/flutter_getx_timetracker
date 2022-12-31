@@ -1,0 +1,12 @@
+{
+    "helloWorld": "Hello World!",
+    "timeTracker": "时间追踪",
+    "submit": "提交",
+    "canel": "取消",
+    "history": "历史",
+    "review": "检查",
+    "timeTrackerTitle": "时间追踪",
+    "workReview": "工作检查",
+    "addNewTracker": "增加跟踪",
+    "editTracker": "编辑跟踪"    
+}

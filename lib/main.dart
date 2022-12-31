@@ -16,6 +16,8 @@ import 'controllers/dialog.dart';
 import 'controllers/tracker_list.dart';
 import 'data/entity_mapper.dart';
 import 'data/repositories/action.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -58,10 +60,22 @@ Future<void> main() async {
   await Hive.openBox(BoxStorage.boxName);
 
   runApp(DevicePreview(
-    enabled: false,
+    enabled: true,
+    availableLocales: [
+      Locale("en"),
+      Locale("zh"),
+    ],
     builder: (context) => MaterialApp(
+      useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
+      localizationsDelegates: [
+        AppLocalizations.delegate, // Add this line
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
       home: GetMaterialApp(
         smartManagement: SmartManagement.full,
         initialBinding: BindingsBuilder(() {

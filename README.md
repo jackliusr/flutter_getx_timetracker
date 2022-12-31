@@ -2,6 +2,11 @@
 Flutter application for tracking of time
 
 
+## Changes
+
+I added localizations to troubleshoot locale change issues when integrate device_preview, bot_toast, getx. Currently I found that it works when not using GetMaterialApp.router.
+
+
 ## Installation
 
   ```

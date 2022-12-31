@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-
 class DialogController extends GetxController {
-
   TextEditingController dialogInput;
   final formKey = GlobalKey<FormState>();
   var model;
@@ -34,5 +32,4 @@ class DialogController extends GetxController {
   }
 
   void clearText() => dialogInput.text = "";
-
 }

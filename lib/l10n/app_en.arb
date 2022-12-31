@@ -1,0 +1,12 @@
+{
+    "helloWorld": "Hello World!",
+    "timeTracker": "TimeTracker",
+    "submit": "Submit",
+    "canel": "Cancel",
+    "history": "History",
+    "review": "Review",
+    "timeTrackerTitle": "Time trackers",
+    "workReview": "Work review",
+    "addNewTracker": "Add new tracker",
+    "editTracker": "Edit tracker"
+}

@@ -9,6 +9,7 @@ import 'package:timetracker/views/dialog.dart';
 import 'package:timetracker/views/history.dart';
 import 'package:timetracker/views/review.dart';
 import 'package:timetracker/views/tracker_list.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TabNavigationItem {
   final Widget page;
@@ -47,11 +48,8 @@ class HomePage extends StatelessWidget {
       init: HomeController(),
       builder: (controller) => Scaffold(
         appBar: AppBar(
-          title: Text("TimeTracker"),
-          actions: [
-            if (controller.index == 0)
-              NewTrackerButton()
-          ],
+          title: Text("Time Trackers"),
+          actions: [if (controller.index == 0) NewTrackerButton()],
         ),
         body: AnimatedIndexedStack(
           transitionBuilder: slideTransition,
@@ -88,7 +86,7 @@ class NewTrackerButton extends GetView<TrackerListController> {
             context: context,
             builder: (BuildContext context) {
               return TrackerDialog(
-                title: "Add new tracker",
+                title: AppLocalizations.of(context).addNewTracker,
                 onSubmit: (item) => controller.addItem(item),
               );
             },
